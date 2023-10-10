@@ -5,11 +5,6 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dcelery.settings')
 
 app = Celery("dcelery")
 app.config_from_object("django.conf:settings", namespace="CELERY_")
-
-
-@app.task
-def add_numbers():
-    return 
-
+app.conf.task_routes = {'cworker.tasks.task1':{'queue':'queue1'}, 'cworker.tasks.task2':{'queue':'queue2'}}
 
 app.autodiscover_tasks()
