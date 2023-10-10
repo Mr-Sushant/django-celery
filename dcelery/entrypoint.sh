@@ -3,4 +3,4 @@
 echo "Apply db migration"
 python manage.py migrate
 
-exec"$@"
+exec "$@"
