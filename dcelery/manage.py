@@ -4,6 +4,11 @@ import os
 import sys
 
 
+SECRET_KEY = os.environ.get('SECRET_KEY')
+DEBUG = os.environ.get('DEBUG')
+ALLWOED_HOSTS = os.environ.get('ALLWOED_HOSTS').split(',')
+
+
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dcelery.settings')
