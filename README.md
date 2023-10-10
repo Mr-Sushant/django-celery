@@ -18,3 +18,8 @@ Values are from 0 to 9
 1. Ensure critical tasks are executed first
 2. optimize resource allocation
 3. Meet SLAs and deadlines
+
+
+## Commands
+docker-compose up -d --build
+docker exec -it django /bin/sh
